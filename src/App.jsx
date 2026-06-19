@@ -4,6 +4,9 @@ import './App.css'
 function App() {
 
   const [workouts, setWorkouts] = useState([])
+  const [name, setName] = useState("")
+  const [sets, setSets] = useState("")
+  const [reps, setReps] = useState("")
 
 
   function addWorkout() {
@@ -17,6 +20,20 @@ function App() {
     setWorkouts(prev => [...prev, newWorkout])
   }
 
+  return (
+    <div>
+      <h1>WORKOUT APP</h1>
+
+      <div>
+        {workouts.map((workout) => (
+          <div key={workout.id}>
+            {workout.name} / {workout.sets} / {workout.reps}
+          </div>
+        ))}
+      </div>
+
+    </div>
+  )
 
 }
 

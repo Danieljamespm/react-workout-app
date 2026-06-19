@@ -20,6 +20,12 @@ function App() {
     setWorkouts(prev => [...prev, newWorkout])
   }
 
+  function deleteWorkout(id) {
+    setWorkouts(prev =>
+      prev.filter(workout => workout.id !== id)
+    )
+  }
+
   return (
     <div>
       <h1>WORKOUT APP</h1>
@@ -28,6 +34,10 @@ function App() {
         {workouts.map((workout) => (
           <div key={workout.id}>
             {workout.name} / {workout.sets} / {workout.reps}
+
+            <button onClick={() => deleteWorkout(workout.id)}>
+              X
+            </button>
           </div>
         ))}
       </div>

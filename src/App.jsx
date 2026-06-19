@@ -32,6 +32,38 @@ function App() {
         ))}
       </div>
 
+      <form onSubmit={(e) => {
+        e.preventDefault()
+        addWorkout()
+        setName("")
+        setSets("")
+        setReps("")
+      }}>
+
+        <input type="text"
+          value={name}
+          placeholder='Enter Workout Name'
+          onChange={(e) => setName(e.target.value)}
+        />
+
+        <input type="text"
+          value={sets}
+          placeholder='How many sets?'
+          onChange={(e) => setSets(e.target.value)}
+        />
+
+        <input type="text"
+          value={reps}
+          placeholder='How many reps?'
+          onChange={(e) => setReps(e.target.value)}
+        />
+
+        <button type='submit'>
+          Add Workout
+        </button>
+
+      </form>
+
     </div>
   )
 

@@ -1,20 +1,32 @@
-<<<<<<< HEAD
-# React + Vite
+-WORKOUT TRACKER APP-
+A simple React workout tracking app built to practice core frontend concepts like state management, controlled inputs, and rendering.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+-Features-
+*Add workouts(name, sets, reps)
+*Mark workouts as completed
+*Delete workouts
+*interactive UI
+*Completed workouts visually look different than not completed
+*Responsive layout
 
-Currently, two official plugins are available:
+-What I Learned-
+I built this project to help strengthen my understanding of:
+*React state with useState
+*Updating arrays with map() and filter()
+*Controlled form inputs
+*Conditional rendering
+*Component structure and UI state flow
+*CSS styling and flexbox
+*UX interactivity using hover states and transitions
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+-Tech Stack-
+*React(Vite)
+*Javascript
+*CSS
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# react-workout-app
->>>>>>> 0c49f1f91cbd1a76459f27be885723a97424c2dc
+-Future Improvements-
+*Save workouts to localStorage
+*Add edit workout feature
+*Add input for weight used during workout to track workout improvement along side reps
+*Add workout category feature
+*Further improve UI design

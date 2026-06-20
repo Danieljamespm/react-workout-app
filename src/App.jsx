@@ -26,6 +26,14 @@ function App() {
     )
   }
 
+  function toggleWorkout(id) {
+    setWorkouts(prev =>
+      prev.map((workout) => (
+        workout.id === id ? { ...workout, completed: !workout.completed } : workout
+      ))
+    )
+  }
+
   return (
     <div>
       <h1>WORKOUT APP</h1>
@@ -34,6 +42,10 @@ function App() {
         {workouts.map((workout) => (
           <div key={workout.id}>
             {workout.name} / {workout.sets} / {workout.reps}
+
+            <input type="checkbox"
+              checked={workout.completed}
+              onChange={() => toggleWorkout(workout.id)} />
 
             <button onClick={() => deleteWorkout(workout.id)}>
               X

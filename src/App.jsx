@@ -38,16 +38,19 @@ function App() {
     <div>
       <h1>WORKOUT APP</h1>
 
-      <div>
+      <div className='workout-container'>
         {workouts.map((workout) => (
-          <div key={workout.id}>
+          <div key={workout.id} className={`workout-card ${workout.completed ? "completed" : ""}`}>
             {workout.name} / {workout.sets} / {workout.reps}
 
             <input type="checkbox"
               checked={workout.completed}
               onChange={() => toggleWorkout(workout.id)} />
 
-            <button onClick={() => deleteWorkout(workout.id)}>
+            <button
+              onClick={() => deleteWorkout(workout.id)}
+              className='dlt-btn'
+            >
               X
             </button>
           </div>
@@ -66,21 +69,27 @@ function App() {
           value={name}
           placeholder='Enter Workout Name'
           onChange={(e) => setName(e.target.value)}
+          className='input-form'
         />
 
         <input type="text"
           value={sets}
           placeholder='How many sets?'
           onChange={(e) => setSets(e.target.value)}
+          className='input-form'
         />
 
         <input type="text"
           value={reps}
           placeholder='How many reps?'
           onChange={(e) => setReps(e.target.value)}
+          className='input-form'
         />
 
-        <button type='submit'>
+        <button
+          type='submit'
+          className='input-form'
+        >
           Add Workout
         </button>
 
